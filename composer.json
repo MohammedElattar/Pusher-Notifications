@@ -1,0 +1,31 @@
+{
+    "name": "elattar/pusher-notification",
+    "description": "Pusher Notification Package",
+    "type": "library",
+    "require-dev": {
+        "orchestra/testbench": "dev-develop"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elattar\\PusherNotification\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamed Attar",
+            "email": "mohammedattar0100020@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "pusher/pusher-php-server": "^7.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elattar\\PusherNotification\\Providers\\PusherNotificationServiceProvider"
+            ]
+        }
+    },
+    "version": "0.1.0"
+}
