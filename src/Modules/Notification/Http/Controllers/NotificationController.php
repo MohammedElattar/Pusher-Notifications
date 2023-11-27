@@ -36,7 +36,7 @@ class NotificationController extends Controller
     {
         $this->notificationService->markOneAsRead($notification);
 
-        return $this->okResponse(
+        return $this->successResponse(
             message: translate_success_message('notification', 'read')
         );
 
@@ -46,7 +46,7 @@ class NotificationController extends Controller
     {
         $this->notificationService->markAllAsRead();
 
-        return $this->okResponse(
+        return $this->successResponse(
             message: translate_success_message('notifications', 'read')
         );
     }
@@ -55,7 +55,7 @@ class NotificationController extends Controller
     {
         $this->notificationService->deleteNotification($notification);
 
-        return $this->okResponse(
+        return $this->successResponse(
             message: translate_success_message('notification', 'deleted')
         );
     }
@@ -64,7 +64,7 @@ class NotificationController extends Controller
     {
         $this->notificationService->deleteAllNotifications();
 
-        return $this->okResponse(
+        return $this->successResponse(
             message: translate_success_message('notifications', 'deleted')
         );
     }
